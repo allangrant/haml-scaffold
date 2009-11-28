@@ -68,27 +68,27 @@ class HamlScaffoldGenerator < Rails::Generator::NamedBase
   end
 
   protected
-    # Override with your own usage banner.
-    def banner
-      "Usage: #{$0} scaffold ModelName [field:type, field:type]"
-    end
+  # Override with your own usage banner.
+  def banner
+    "Usage: #{$0} scaffold ModelName [field:type, field:type]"
+  end
 
-    def add_options!(opt)
-      opt.separator ''
-      opt.separator 'Options:'
-      opt.on("--skip-timestamps",
-             "Don't add timestamps to the migration file for this model") { |v| options[:skip_timestamps] = v }
-      opt.on("--skip-migration",
-             "Don't generate a migration file for this model") { |v| options[:skip_migration] = v }
-      opt.on("--force-plural",
-             "Forces the generation of a plural ModelName") { |v| options[:force_plural] = v }
-    end
+  def add_options!(opt)
+    opt.separator ''
+    opt.separator 'Options:'
+    opt.on("--skip-timestamps",
+           "Don't add timestamps to the migration file for this model") { |v| options[:skip_timestamps] = v }
+    opt.on("--skip-migration",
+           "Don't generate a migration file for this model") { |v| options[:skip_migration] = v }
+    opt.on("--force-plural",
+           "Forces the generation of a plural ModelName") { |v| options[:force_plural] = v }
+  end
 
-    def scaffold_views
-      %w[ index show new edit ]
-    end
+  def scaffold_views
+    %w[ index show new edit ]
+  end
 
-    def model_name
-      class_name.demodulize
-    end
+  def model_name
+    class_name.demodulize
+  end
 end

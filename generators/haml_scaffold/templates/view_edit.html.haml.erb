@@ -1,4 +1,4 @@
-%h1 Editing <%= singular_name.capitalize %>
+%h1 Editing <%= singular_name.titleize %>
 = render :partial => "form", :locals => {:<%= singular_name %> => @<%= singular_name %>}
 .links
   = link_to 'Show', @<%= singular_name %>
