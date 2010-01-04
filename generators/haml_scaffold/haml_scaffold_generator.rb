@@ -55,7 +55,6 @@ class HamlScaffoldGenerator < Rails::Generator::NamedBase
       end
 
       m.template("_form.html.haml.erb", File.join('app/views', controller_class_path, controller_file_name, "_form.haml"))
-      m.template("_object.html.haml.erb", File.join('app/views', controller_class_path, controller_file_name, "_#{name}.haml"))
       m.template('controller.rb.erb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb"))
       m.template('functional_test.rb.erb', File.join('test/functional', controller_class_path, "#{controller_file_name}_controller_test.rb"))
       m.template('helper.rb.erb',          File.join('app/helpers',     controller_class_path, "#{controller_file_name}_helper.rb"))
