@@ -17,7 +17,7 @@
 
         %td= link_to 'Show', <%= singular_name %>
         %td= link_to 'Edit', edit_<%= singular_name %>_path(<%= singular_name %>)
-        %td= link_to 'Destroy', <%= singular_name %>, :confirm => "Are you sure?", :method => :delete
+        %td= link_to 'Delete', <%= singular_name %>, :confirm => "Are you sure?", :method => :delete
 
   - else
     %tr

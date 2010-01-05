@@ -21,11 +21,11 @@ class PostsController < ApplicationController
   def destroy
     respond_to do |format|
       if @post.destroy
-        flash[:notice] = 'Post was successfully destroyed.'        
+        flash[:notice] = 'Post was successfully deleted.'        
         format.html { redirect_to posts_path }
         format.xml  { head :ok }
       else
-        flash[:error] = 'Post could not be destroyed.'
+        flash[:error] = 'Post could not be deleted.'
         format.html { redirect_to @post }
         format.xml  { head :unprocessable_entity }
       end
