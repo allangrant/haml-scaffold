@@ -10,7 +10,7 @@
 
   - if !@<%= plural_name %>.empty?
     - for <%= singular_name %> in @<%= plural_name %>
-      - content_tag_for :tr, <%= singular_name %>, :class => cycle('', 'even') do
+      %tr{:class => cycle('', 'even')}[<%= singular_name %>]
 <% for attribute in attributes -%>
         %td=h <%= singular_name %>.<%= attribute.name %>
 <% end -%>
